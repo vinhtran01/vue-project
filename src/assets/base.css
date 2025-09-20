@@ -1,0 +1,241 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/FZPoppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/FZPoppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/FZPoppins-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/FZPoppins-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/FZPoppins-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/FZPoppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/FZPoppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avo";
+  src: url("/fonts/utm-avobold.ttf") format("truetype");
+  font-weight: 700;
+}
+:root {
+  --background: #ffffff;
+  --background-B1: #f1f3f8;
+  --background-B2: #f6f7f8;
+  --background-B3: #01306c;
+  --background-B4: #00235a;
+  --G1: #323b4b;
+  --G2: #4e5d78;
+  --G3: #8a94a6;
+  --G4: #b0b7c3;
+  --border: #d6dce7;
+  --primary: #19bb6d;
+  --primary-2: #00b15c;
+  --secondary-blue: #385be9;
+  --secondary-yellow: #ffab00;
+  --secondary-red: #ff5959;
+  --shadow-s1: 0px 0px 12px 0px #b4b8c73d;
+  --shadow-s2: 0px 8px 24px 0px #5f667c1f;
+  --shadow-s3: 4px 16px 32px 0px #6e70791f;
+  --shadow-s4: 0px 44px 56px 0px #6e707929;
+  --shadow-button: 0px 2px 0px 0px #0591ff1a;
+  --shadow-icon-banner: 0px 0px 24px 0px #16f86852;
+  --font-family-poppins: "Poppins", sans-serif;
+  --font-family-Avo: "Avo", sans-serif;
+  --bg-gradient-nav: linear-gradient(
+      0deg,
+      rgba(14, 211, 97, 0.32),
+      rgba(14, 211, 97, 0.32)
+    ),
+    radial-gradient(
+      51.64% 59.09% at 51.64% 0%,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  --bg-gradient-menu--nav: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.08)
+    ),
+    radial-gradient(
+      149.08% 49.18% at 50% 0%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  --bg-gradient-social: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.12),
+      rgba(255, 255, 255, 0.12)
+    ),
+    radial-gradient(
+      234.82% 110.79% at 6.27% 3.52%,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  --bg-system: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f8f9fb 19.71%,
+    #eef3f9 100%
+  );
+  --bg-type: linear-gradient(180deg, #f8f9fb 0%, #ffffff 57.23%);
+
+  /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+}
+
+@theme inline {
+  --breakpoint-*: initial;
+  --color-background: var(--background);
+  --color-background-b1: var(--background-B1);
+  --color-background-b2: var(--background-B2);
+  --color-background-b3: var(--background-B3);
+  --color-background-b4: var(--background-B4);
+  --color-g1: var(--G1);
+  --color-g2: var(--G2);
+  --color-g3: var(--G3);
+  --color-g4: var(--G4);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-2: var(--primary-2);
+  --color-secondary-blue: var(--secondary-blue);
+  --color-secondary-yellow: var(--secondary-yellow);
+  --color-secondary-red: var(--secondary-red);
+  --shadow-s1: var(--shadow-s1);
+  --shadow-s2: var(--shadow-s2);
+  --shadow-s3: var(--shadow-s3);
+  --shadow-s4: var(--shadow-s4);
+  --shadow-btn: var(--shadow-button);
+  --color-foreground: var(--foreground);
+  --font-poppins: var(--font-family-poppins);
+  --font-avo: var(--font-family-Avo);
+  --bg-nav: var(--bg-gradient-nav);
+  --bg-menu--nav: var(--bg-gradient-menu--nav);
+  --bg-social: var(--bg-gradient-social);
+  --shadow-icon-banner: var(--shadow-icon-banner);
+}
+
+@custom-variant 2xl (@media only screen and (max-width: 1536px));
+@custom-variant xl (@media only screen and (max-width: 1280px));
+@custom-variant lg (@media only screen and (max-width: 1080px));
+@custom-variant lg-small (@media only screen and (max-width: 850px));
+@custom-variant md (@media only screen and (max-width: 767px));
+@custom-variant sm (@media only screen and (max-width: 639px));
+
+@layer base {
+  * {
+    @apply box-border font-poppins leading-[150%];
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply pt-4 sm:pt-[6px] bg-background text-g2 font-poppins lg-small:pt-2;
+  }
+}
+
+@keyframes sacleImage {
+  0% {
+    transform: scale(0.7);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.img_active {
+  animation: sacleImage 0.3s linear;
+  animation-fill-mode: forwards;
+  transform-origin: bottom;
+}
+.btn-support svg path {
+  fill: #07dc76;
+}
+.text-pain_points {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffffff1f;
+}
+.slide-action:hover svg path {
+  fill: #fff;
+}
+
+.text-type_border {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #01306c;
+}
+.tab-type::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* ///////////// */
+.customer-slider .swiper-pagination {
+  @apply absolute w-auto  !left-[222px] !bottom-10 -translate-x-1/2 xl:!left-[180px] md:!hidden;
+}
+.customer-slider .swiper-pagination .swiper-pagination-bullet {
+  @apply mx-[3px] w-[30px] h-1 transition-all duration-300 !rounded-none bg-[#707f9b]  ease-in-out;
+}
+
+.customer-slider .swiper-pagination .swiper-pagination-bullet-active {
+  @apply bg-white;
+}
+
+.nav-item:nth-child(odd) svg path {
+  @apply lg-small:stroke-g4;
+}
+.nav-item:nth-child(even) svg path {
+  @apply lg-small:fill-g4;
+}
+.nav-active:nth-child(odd) svg path {
+  @apply lg-small:stroke-white;
+}
+.nav-active:nth-child(even) svg path {
+  @apply lg-small:fill-white;
+}
+.type_img:last-child {
+  @apply border-none;
+}
+.type_img:last-child::after {
+  background: linear-gradient(
+    270deg,
+    #ffffff 30%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+}
